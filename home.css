@@ -1,0 +1,513 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* --------------- BODY --------------- */
+body{
+    background-color: rgb(0, 0, 114) !important;
+    color: white !important;
+}
+/* --------------- HEADER --------------- */
+
+/* --------------- NAV --------------- */
+
+.navbar-home{
+    display: flex;  
+    padding: 0;
+    background-color: black;
+    color: white;
+    height: 0;
+}
+
+.contenido-navbar{
+    opacity: 0;
+    /* overflow: hidden; */
+    visibility: hidden;
+    transition: opacity 0.5s ease, ease, visibility 0.5s;
+}
+
+.menu-burguer{
+    margin: auto;
+    width: 100%;
+    display: flex !important;
+    justify-content: center;
+    background-color: rgb(0, 0, 114);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 30px 0;
+    border-bottom: 2px solid black
+}
+
+.menu-burguer i{
+    margin: auto 15px;
+}
+
+#flechaMenu{
+    transition: transform 0.3s ease;
+}
+
+.flecha-menu{
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
+
+
+
+.mostrar-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-size: 2rem;
+    margin: auto;
+    position: fixed;
+    z-index: 2;
+    background-color: black;
+    padding: 6px 0;
+    font-size: 3rem;
+    opacity: 1;
+    height: auto;
+    visibility: visible;
+    padding: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* .contenido-navbar{
+    transition: 3s ease;
+
+} */
+
+.contenido-navbar li{
+    text-decoration: none;
+    list-style: none;
+    width: 80%;
+    border: 2px black solid;
+    background-color: rgb(0, 0, 114);
+    align-content: center;
+    font-size: 50%;
+    padding: 15px 0;
+}
+
+.contenido-navbar li i{
+    margin-right: 5px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.items-navbar {
+    text-transform: uppercase;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    color: white; 
+    font-size: 100%;
+}
+
+/* #homeButton{
+    border-top: 2px black solid;
+} */
+
+/* --------------- MAIN --------------- */
+
+main{
+    margin-bottom: 30px;
+}
+
+/* --------------- TITULO DE BIENVENIDA --------------- */
+
+.titulo-bienvenida{
+    display: flex;
+    width: auto;
+    padding: 10px 5px;
+    background-color: black;
+    opacity: 0.7;
+    text-align: center;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-bienvenida h1{
+    font-size: 100%;
+    margin: 0 10px;
+}
+
+.titulo-bienvenida i{
+    font-size: 100%;
+}
+
+/* --------------- CARRUSEL --------------- */
+
+.carrusel-home .carousel-inner {
+   height: 185px; 
+}
+
+.carousel-item{
+    height: 100%;
+}
+
+.carrusel-home .carousel-inner img {
+  height: 100%;
+  object-fit: fill; 
+  width: 100% !important;
+}
+
+
+/* --------------- PRODUCTOS --------------- */
+
+.productos{
+    margin: 7% 0;
+    padding: 4px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.producto{
+    width: 70%;
+    height: fit-content;
+    /* height: 800px; */
+    margin: 15px;
+    background-color: rgb(0, 0, 0, 0.5);
+    border: black 2px solid;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.producto h2, .producto h3, .producto p{
+    padding: 0 15px;
+}
+
+.producto h2{
+    margin-bottom: auto;
+}
+
+.producto img{
+    width: 100%;
+    height: 60%;
+    border-radius: 15px 15px 0 0;
+    object-fit: fill;
+}
+
+.producto h3{
+    margin-top: 10px;
+}
+
+.producto p{
+    margin-bottom: 10px;
+}
+
+.producto h2{
+    margin-right: 8%;
+    text-align: end;
+}
+
+/* --------------- TÍTULO DEL FORMULARIO --------------- */
+
+.titulo-formulario{
+    text-align: center;
+    padding: 15px;
+    margin: 0 auto;
+    width: 80%;
+    border: 2px solid black;
+    border-radius: 15px 15px 0 0;
+    background-color: rgb(0, 0, 0, 0.5);
+    border-bottom: none;
+}
+
+/* --------------- FORMULARIO --------------- */
+
+form{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    margin-top: 0;
+    padding: 20px 10px;
+    border: black solid 2px;
+    border-radius: 15px;
+}
+
+form label{
+    margin-top: 15px;
+    padding-left: 5px;
+    text-transform: uppercase;
+}
+
+form input, form textarea{
+    border-radius: 0px 0px 6px 6px;
+    padding-left: 10px;
+}
+
+.btn-formulario{
+    width: 35%;
+    margin-top: 15px;
+    padding: 4px 0;
+    margin-left: auto;
+    text-transform: uppercase;
+    color: white;
+    background-color: rgb(0, 0, 0, 0.5);
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+/* --------------- FOOTER --------------- */
+
+footer{
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 0;
+    border-top: rgb(255, 255, 255, 0.3) solid 0.5px;
+}
+
+footer div{
+    width: 95%;
+    margin-top: 15px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.footer-contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-contacto h3{
+    font-size: 10px !important;
+}
+
+.footer-contacto a{
+    text-decoration: none !important;
+    color: white;
+}
+
+.footer-redes{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-redes i{
+    display: flex;
+    margin: 0;
+    padding: 10px;
+    border-radius: 25%;
+    height: 82px;
+    width: 23%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 200%;
+}
+
+.footer-derechos{
+    display: flex;
+    justify-content: center;
+    font-size: 8px;
+    padding-bottom: 0px;
+}
+
+.logo-instagram{
+    background: radial-gradient(
+        circle at 33% 100%,
+        #fed373 4%,
+        #f15245 30%,
+        #d92e7f 62%,
+        #9b36b7 85%,
+        #515ecf);
+}
+
+.logo-facebook{
+   color: white;
+   border: 2px solid white;
+   padding: 10px 20px !important;
+}
+
+.logo-whatsapp{
+    color: white;
+    background-color: rgb(0, 114, 28);
+}
+
+.logo-tiktok{
+    background-color: black;
+    color: white;
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* -----------------------------------     MEDIA QUERY'S     ------------------------------------------ */
+/* ---------------------------------------------------------------------------------------------------- */
+  
+/* --------------- TABLET --------------- */
+
+@media (min-width: 768px) {
+
+    .menu-burguer{
+        display: none !important;
+    }
+
+    .navbar-home{
+        height: auto;
+    }
+    
+
+    .contenido-navbar{
+        margin: 0;
+        padding: 2px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+        align-items: center;
+        background-color: black;
+        /* opacity: 0.7; */
+        flex-wrap: nowrap;
+        height: auto;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .contenido-navbar li{
+        width: 100%;
+        font-size: 100%;
+        background-color: rgb(0, 0, 114,0.7);
+    }
+
+    .carrusel-home .carousel-inner {
+        height: 250px; 
+    }
+
+    .productos{
+        margin: 2% 0;
+    }
+
+    .producto{
+        width: 43%;
+        height: 400px;
+        margin-top: 0;
+    }
+
+    .producto h2{
+        margin-bottom: auto;
+    }
+
+    .producto-descripcion{
+        overflow-y: scroll;
+    }
+
+    .producto img{
+        height: 210px;
+    }
+
+    }
+
+/* --------------- LAPTOP --------------- */
+
+@media (min-width: 1023px) {
+
+    /* .contenido-navbar{
+        background-color: rgb(0, 0, 114);
+    }
+
+    .contenido-navbar li{
+        width: auto;
+        font-size: 1rem;
+    }
+    
+    #homeButton{
+        padding-right: 20px;
+        padding-left: 20px;
+    } */
+
+    .carrusel-home .carousel-inner {
+       height: 400px; 
+    }
+
+    /* .items-navbar{
+        opacity: 1;
+    } */
+
+    .contenido-navbar{
+        padding: 0;
+        opacity: 1;
+    }
+    .contenido-navbar li {
+        border: none;
+        border-radius: 0;
+        padding: 0;
+    }
+
+
+    .items-navbar:hover {
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 114); 
+    }
+
+    #homeButton:hover{
+        background-color: white;
+        color: black;
+    }
+
+    .items-navbar {
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .producto{
+        width: 21%;
+        flex-grow: 1;
+        flex-shrink: 0;    
+        justify-content: flex-start   
+    }
+
+    .producto h3{
+        font-size: 15px;
+    }
+
+    .producto-descripcion{
+        overflow-y: hidden;
+        /* transition: max-height 10s ease; */
+    }
+
+    .producto-descripcion:hover{
+        overflow-y: auto;
+        /* max-height: 500px; */
+    }
+
+    .titulo-formulario{
+        width: 60%;
+    }
+
+    form{
+        margin: 0px 300px;
+        padding: 50px 35px;
+        border-radius: 0 0 15px 15px;
+        border-top: none;
+    }
+
+    footer{
+        flex-direction: row;
+    }
+
+    .footer-contacto h3{
+        font-size: 20px !important;
+    }
+
+    .footer-derechos{
+        font-size: 15px;
+        justify-content:end;
+        align-items: end;
+        margin-top: auto;
+    }
+
+}
