@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
-app.use('/', productosRuta);
+app.use('/productos', productosRuta);
 
 const PORT = 3000;
 app.listen(PORT, () => {
