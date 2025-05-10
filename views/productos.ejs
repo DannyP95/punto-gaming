@@ -24,6 +24,11 @@
                         <p><%= producto.descripcion %></p>
                     </div>
                     <h2>$ <%= producto.precio %></h2>
+
+                    <div class="botones-productos">
+                        <button>Eliminar</button>
+                        <a href="/productos/<%=producto.id%>"><button>Editar</button></a>
+                    </div>
                 
                 </div>
                 <% }) %>
