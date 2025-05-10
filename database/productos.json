@@ -1,0 +1,34 @@
+[
+    {
+        "id":1,
+        "nombre": "NombreJSON",
+        "marca": "MarcaJSON",
+        "descripcion": "descripcion",
+        "precio": 1010,
+        "imagen": "producto4.jpg"
+    },
+    {
+        "id":2,
+        "nombre": "Nombre2JSON",
+        "marca": "Marca2JSON",
+        "descripcion": "descripcion2",
+        "precio": 1010,
+        "imagen": "producto6.png"
+    },
+    {
+        "id":3,
+        "nombre": "Nombre3JSON",
+        "marca": "Marca3JSON",
+        "descripcion": "descripcion3",
+        "precio": 1010,
+        "imagen": "producto8.png"
+    },
+    {
+        "id":2,
+        "nombre": "Nombre4JSON",
+        "marca": "Marca4JSON",
+        "descripcion": "descripcion4",
+        "precio": 1010,
+        "imagen": "producto3.png"
+    }
+]

@@ -1,8 +1,8 @@
-const {obtenerProductos} = require ('../database/productos.json');
+const productos = require('../database/productos.json');
 
-function mostrarProductos(req, res){
-    const todos = obtenerProductos();
-    res.render('index', {productos: todos});
+function mostrarProductos(req, res) {
+    res.render('productos', { productos });
 }
 
-module.exports = {mostrarProductos};
+module.exports = { mostrarProductos };
+

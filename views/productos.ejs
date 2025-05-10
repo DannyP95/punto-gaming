@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Productos de nuestra tienda</title>
+    <%- include ('./partials/head.ejs') %>
+</head>
+<body>
+
+<!-- -------- HEADER -------- -->
+ 
+    <%- include ('./partials/header.ejs') %>
+
+<!-- -------- MAIN -------- -->
+    
+    <section id="productos" class="productos">
+        <% productos.forEach(producto => { %>
+            <div class="producto">
+                    <div class="producto-img">
+                        <img src="./images/<%= producto.imagen %>">
+                    </div>
+                    <h2><%= producto.nombre %></h2>
+                    <h3><%= producto.marca %></h3>
+                    <div class="producto-descripcion">
+                        <p><%= producto.descripcion %></p>
+                    </div>
+                    <h2>$ <%= producto.precio %></h2>
+                
+                </div>
+                <% }) %>
+    </section>
+            
+<!-- -------- FOOTER -------- -->
+
+    <%- include ('./partials/footer.ejs') %>
+
+</body>
+</html>
