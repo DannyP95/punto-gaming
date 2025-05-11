@@ -64,6 +64,36 @@ const productosController = {
         } else{
             res.status(400).send("Producto no encontrado")
         }
+    },
+
+    eliminarView: (req, res) => {
+        const id = req.params.id;
+        const producto = productos.find(prod => prod.id == id);
+        if (producto) {
+            res.render('eliminarProducto', { producto });
+        }},
+
+    eliminar: (req, res) => {
+        const id = req.params.id;
+        const productoIndex = productos.findIndex(prod => prod.id == id);
+        console.log('llega hasta el if');
+        
+        if (productoIndex !== -1) {
+            const productoEliminado = productos[productoIndex]; 
+            productos.splice(productoIndex, 1);
+
+            try {
+                fs.writeFileSync(productosFilePath, JSON.stringify(productos, null, " "));
+                res.render("eliminarProducto", { producto: productoEliminado });
+
+            } catch (err) {
+                console.log("Error al eliminar el producto");
+                console.error(err);
+                res.status(500).send("Error al eliminar el producto");
+            }
+        } else {
+            res.status(404).send("Producto no encontrado");
+        }
     }
 
 

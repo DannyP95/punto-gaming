@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <%- include ('./partials/head.ejs') %>
+    
+    <title>Crear nuevo producto</title>
+
+</head>
+<body>
+
+<!-- -------- HEADER -------- -->
+<%- include('./partials/header.ejs') %>
+
+<!-- -------- MAIN -------- -->
+<main>
+        <h1>Producto <%= producto.nombre %> eliminado</h1>
+        <a href="/productos"><button>Volver</button></a>
+        <a href="/"><button>Ir al inicio</button></a>
+</main>
+
+<!-- -------- FOOTER -------- -->
+<%- include('./partials/footer.ejs') %>
+
+</body>
+</html>
