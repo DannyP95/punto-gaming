@@ -22,7 +22,7 @@ const productosController = {
 
     crear:(req, res) =>{
        const {nombre, marca, descripcion, precio} = req.body;
-       const imagen = req.file ? req.file.filename : null;
+       const imagen = req.file ? req.file.filename : "image-not-found.png";
        const nuevoProduct = {
         id: productos.length + 1,
         nombre,
@@ -35,7 +35,7 @@ const productosController = {
        try{
         productos.push(nuevoProduct);
         fs.writeFileSync(productosFilePath, JSON.stringify(productos, null, " "));
-        res.redirect("/")
+        res.redirect("/productos")
        }
        catch(err){
         console.log("Error al guardar el producto")
@@ -69,14 +69,12 @@ const productosController = {
     eliminarView: (req, res) => {
         const id = req.params.id;
         const producto = productos.find(prod => prod.id == id);
-        if (producto) {
-            res.render('eliminarProducto', { producto });
-        }},
+        res.render('eliminarProducto', { producto });
+        },
 
     eliminar: (req, res) => {
         const id = req.params.id;
         const productoIndex = productos.findIndex(prod => prod.id == id);
-        console.log('llega hasta el if');
         
         if (productoIndex !== -1) {
             const productoEliminado = productos[productoIndex]; 
@@ -90,13 +88,8 @@ const productosController = {
                 console.log("Error al eliminar el producto");
                 console.error(err);
                 res.status(500).send("Error al eliminar el producto");
-            }
-        } else {
-            res.status(404).send("Producto no encontrado");
-        }
+            }}
     }
-
-
 }
 
 

@@ -210,6 +210,23 @@ main{
     text-align: end;
 }
 
+/* --------------- BOTONES DE PRODUCTO --------------- */
+
+
+.btn-crear-producto{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.btn-crear-producto button{
+    padding: 20px;
+    text-transform: uppercase;
+    background-color: lightskyblue;
+    border-radius: 20px;
+    font-style: italic;
+}
+
 /* --------------- TÍTULO DEL FORMULARIO --------------- */
 
 .titulo-formulario{
@@ -256,6 +273,170 @@ form input, form textarea{
     background-color: rgb(0, 0, 0, 0.5);
     border: 1px solid white;
     border-radius: 5px;
+}
+
+.btn-productos{
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+
+}
+
+.formulario-btn-eliminar, .btn-productos a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+    margin: 0 5px;
+    padding: 0;
+}
+
+/* --------------- PÁGINA CREAR PRODUCTO --------------- */
+
+.titulo-crear-vista{
+    font-size: 22px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.formulario-crear-producto{
+    border: 3px solid white;
+    border-radius: 30px;
+    align-items: center;
+}
+
+.formulario-crear-producto div{
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    align-items: flex-start;
+}
+
+.formulario-crear-producto label{
+    margin-top: 0;
+    padding-left: 5px;
+    text-transform: uppercase;
+    width: 40%;
+    text-align: end;
+    margin-right: 10px;
+}
+
+.formulario-crear-producto input{
+    border-radius: 0px 0px 6px 6px;
+    padding-left: 10px;
+    width: 60%;
+    margin-left: 0;
+}
+
+.formulario-crear-producto textarea{
+    height: 26px;
+    border-radius: 0px 0px 6px 6px;
+    padding-left: 10px;
+    width: 45%;
+    margin-left: 0;
+}
+
+.crear-botones{
+    padding: 0;
+}
+
+.crear-botones, .eliminar-botones{
+    width: 95% !important;
+    align-items: center;
+    display: block !important;
+}
+
+.crear-botones button, .eliminar-botones button{
+    padding: 5px 10px;
+    border: 2px solid rgb(0, 0, 114);
+    border-radius: 15px;
+    background-color: white;
+    color: blue;
+    text-transform: uppercase;
+    font-size: 25px;
+    margin: 3px 0px;
+    width: 100%;
+}
+
+.crear-botones button:hover, .eliminar-botones button:hover{
+    border: 2px solid white;
+    color: white;
+    background-color: rgb(0, 0, 114);
+}
+
+.div-imagenes-crear{
+    flex-direction: column;
+}
+
+.imagenes-crear{
+    flex-direction: row;
+}
+
+.imagenes-crear input{
+    margin-left: -10px;
+}
+
+.imagen-previa-crear{
+    width: 50% !important;
+    margin: auto;
+}
+
+.imagen-previa-visualizada{
+    margin: auto;
+    width: 100%;
+}
+
+/* --------------- PÁGINA ELIMINAR PRODUCTO --------------- */
+
+.eliminar-producto-main{
+    height: 450px;
+    display: flex;
+}
+
+.eliminar-producto-vista{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.eliminar-producto-vista h1{
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    text-transform: uppercase;
+    padding: 20px 0;
+}
+
+.eliminar-nombre-marca{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.eliminar-imagen {
+    width: 70%;
+    padding: 20px 0;
+}
+
+.eliminar-imagen img{
+    width: 100%;
+}
+
+.eliminar-botones a{
+    text-decoration: none;
+}
+
+.eliminar-botones button{
+    width: 250px;
+    margin: 3px auto;
+    display: flex;
+    justify-content: center;
 }
 
 /* --------------- FOOTER --------------- */
@@ -390,6 +571,7 @@ footer div{
 
     .productos{
         margin: 2% 0;
+        justify-content: space-around;
     }
 
     .producto{
@@ -410,7 +592,57 @@ footer div{
         height: 210px;
     }
 
+    .btn-crear-producto {
+        width: 100%;
+        font-size: xx-large;
     }
+
+    .btn-crear-producto button{
+        padding: 20px 75px;
+    }
+
+    .formulario-btn-eliminar, .btn-productos a{
+        margin: 5px 10px;
+    }
+
+    /* --------------- PÁGINA CREAR PRODUCTO --------------- */
+    
+    .formulario-crear-producto{
+        margin: 0 40px;
+    }
+    
+    .formulario-crear-producto label{
+        width: 25%;
+    }
+    
+    .formulario-crear-producto input, .formulario-crear-producto textarea{
+        width: 70%;
+    }
+    
+    .crear-botones{
+        display: flex !important;
+        justify-content: space-evenly;
+    }
+    
+    .crear-botones button{
+        width: 100%;
+    }
+    /* --------------- PÁGINA CREAR PRODUCTO --------------- */
+
+    .eliminar-imagen{
+        width: 70%;
+        padding: 20px 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .eliminar-imagen img{
+        width: auto;
+        max-height: 300px;
+    }
+    
+    
+}
 
 /* --------------- LAPTOP --------------- */
 
@@ -465,7 +697,6 @@ footer div{
 
     .producto{
         width: 21%;
-        flex-grow: 1;
         flex-shrink: 0;    
         justify-content: flex-start   
     }
@@ -487,6 +718,62 @@ footer div{
     .titulo-formulario{
         width: 60%;
     }
+
+    .btn-crear-producto{
+        width: 26%;
+        font-size: 1rem;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        z-index: 3;
+    }
+
+    .btn-crear-producto button:hover{
+        background-color: white;
+        color: rgb(0, 0, 114);
+    }
+
+    .btn-crear-producto button{
+        padding: 10px;
+        width: 50%;
+    }
+
+    /* --------------- PÁGINA CREAR PRODUCTO --------------- */
+    
+    .formulario-crear-producto{
+        width: 80%;
+        text-align: center;
+        margin: auto;
+    }
+    
+    .crear-botones button{
+        width: 300px;
+    }
+/* --------------- PÁGINA CREAR PRODUCTO --------------- */
+
+    .eliminar-imagen img{
+        width: auto;
+        max-height: 500px;
+    }
+
+    .eliminar-botones{
+        display: flex !important;
+        justify-content: space-evenly;
+    }
+
+/* .eliminar-botones { */
+    /* width: 300px; */
+    /* align-items: center;
+    display: block !important;
+    display: flex !important
+;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto; */
+
+/* --------------- PÁGINA ELIMINAR PRODUCTO --------------- */
+
+
 
     form{
         margin: 0px 300px;

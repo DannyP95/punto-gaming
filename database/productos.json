@@ -30,13 +30,5 @@
   "descripcion": "descripcion4",
   "precio": 1010,
   "imagen": "producto3.png"
- },
- {
-  "id": 5,
-  "nombre": "Nombre",
-  "marca": "Marca",
-  "descripcion": "gfhfdgh",
-  "precio": "34563",
-  "imagen": null
  }
 ]

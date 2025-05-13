@@ -14,30 +14,34 @@
 
 <!-- -------- MAIN -------- -->
 <main>
-        <h1>Crear nuevo producto</h1>
+        <h1 class="titulo-crear-vista">Crear nuevo producto</h1>
         
-        <form action="/productos/crear" method="POST" enctype="multipart/form-data">
+        <form class="formulario-crear-producto" action="/productos/crear" method="POST" enctype="multipart/form-data">
             <div>
                 <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" value="Nombre" required>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
             </div>
             <div>
                 <label for="marca">Marca:</label>
-                <input type="text" id="marca" name="marca" value="Marca" required>
+                <input type="text" id="marca" name="marca" placeholder="Marca" required>
             </div>
             <div>
                 <label for="descripcion">Descripción:</label>
-                <textarea id="descripcion" name="descripcion" value="Descripcion"></textarea>
+                <textarea id="descripcion" name="descripcion" placeholder="Descripcion"></textarea>
             </div>
             <div>
                 <label for="precio">Precio:</label>
-                <input type="number" id="precio" name="precio" value="Precio" required>
+                <input type="number" id="precio" name="precio" placeholder="Precio" required>
             </div>
-            <div>
-                <label for="imagen">Imagen:</label>
-                <input type="file" id="imagen" name="imagen">
+            <div class="div-imagenes-crear">
+                <div class="imagenes-crear">
+                    <label for="imagen">Imagen:</label>
+                    <input type="file" id="imagen" name="imagen">
+                </div>
+                <div id="imagenPreviaCrear" class="imagen-previa-crear">
+                </div>
             </div>
-            <div>
+            <div class="crear-botones">
                 <a href="/productos"><button type="button">Cancelar</button></a>
                 <a href="/"><button type="submit">Crear Producto</button></a>
             </div>
@@ -46,6 +50,8 @@
 
 <!-- -------- FOOTER -------- -->
 <%- include('./partials/footer.ejs') %>
+
+<script src="/script.js"></script>
 
 </body>
 </html>

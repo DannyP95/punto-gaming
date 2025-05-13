@@ -14,9 +14,20 @@
 
 <!-- -------- MAIN -------- -->
 <main>
-        <h1>Producto <%= producto.nombre %> eliminado</h1>
-        <a href="/productos"><button>Volver</button></a>
-        <a href="/"><button>Ir al inicio</button></a>
+    <div class="eliminar-producto-vista">
+        <h1>Producto eliminado</h1>
+        <div class="eliminar-nombre-marca">
+            <h3><%= producto.nombre %> </h3>
+            <h4><%= producto.marca %> </h4>
+        </div>
+        <div class="eliminar-imagen">
+            <img src="/images/<%= producto.imagen %>">
+        </div>
+        <div class="eliminar-botones">
+            <a href="/"><button>Ir al inicio</button></a>
+            <a href="/productos"><button>Volver</button></a>
+        </div>
+    </div>
 </main>
 
 <!-- -------- FOOTER -------- -->
