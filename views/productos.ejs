@@ -19,10 +19,11 @@
                     </div>
                     <h2><%= producto.nombre %></h2>
                     <h3><%= producto.marca %></h3>
+                    <h4><%= producto.categoria ? producto.categoria : 'Sin Categoria' %></h4>
                     <div class="producto-descripcion">
                         <p><%= producto.descripcion %></p>
                     </div>
-                    <h2>$ <%= producto.precio %></h2>
+                    <h5>$ <%= producto.precio %></h5>
 
                     <div class="btn-productos">
                         <form class="formulario-btn-eliminar" action="/productos/eliminar/<%= producto.id %>?_method=DELETE" method="POST">
@@ -44,6 +45,8 @@
 <!-- -------- FOOTER -------- -->
 
     <%- include ('./partials/footer.ejs') %>
-
+    
+    <script src="/script.js"></script>
+    
 </body>
 </html>

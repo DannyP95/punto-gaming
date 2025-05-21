@@ -21,12 +21,13 @@ const productosController = {
     },
 
     crear:(req, res) =>{
-       const {nombre, marca, descripcion, precio} = req.body;
+       const {nombre, marca, categoria, descripcion, precio} = req.body;
        const imagen = req.file ? req.file.filename : "image-not-found.png";
        const nuevoProduct = {
         id: productos.length + 1,
         nombre,
         marca,
+        categoria,
         descripcion,
         precio,
         imagen
@@ -45,13 +46,23 @@ const productosController = {
     },
 
     actualizar: (req, res) =>{
-          const id = req.params.id;
-          const {nombre, marca, descripcion, precio} = req.body;
-        const imagen = req.file ? req.file.filename : null;
-
+        const id = req.params.id;
         const productoIndex = productos.findIndex(prod => prod.id == id);
+        
+        const {nombre, marca, categoria, descripcion, precio} = req.body;
+        const imagen = req.file ? req.file.filename : productos[productoIndex].imagen;
+
         if(productoIndex !== -1){
-            productos[productoIndex] = {id: Number(id), nombre, marca, descripcion, precio, imagen};
+            productos[productoIndex] = 
+            {
+                id: Number(id), 
+                nombre, 
+                marca, 
+                categoria,
+                descripcion, 
+                precio, 
+                imagen
+            };
             try{
                 fs.writeFileSync(productosFilePath, JSON.stringify(productos, null, " "));
                 res.redirect("/")

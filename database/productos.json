@@ -3,8 +3,9 @@
   "id": 1,
   "nombre": "NombreJSON",
   "marca": "MarcaJSON",
+  "categoria": "Componentes para PC",
   "descripcion": "descripcion",
-  "precio": 1010,
+  "precio": "1010",
   "imagen": "producto4.jpg"
  },
  {
@@ -14,21 +15,5 @@
   "descripcion": "descripcion2",
   "precio": 1010,
   "imagen": "producto6.png"
- },
- {
-  "id": 3,
-  "nombre": "Nombre3JSON",
-  "marca": "Marca3JSON",
-  "descripcion": "descripcion3",
-  "precio": 1010,
-  "imagen": "producto8.png"
- },
- {
-  "id": 4,
-  "nombre": "Nombre4JSON",
-  "marca": "Marca4JSON",
-  "descripcion": "descripcion4",
-  "precio": 1010,
-  "imagen": "producto3.png"
  }
 ]

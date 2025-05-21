@@ -26,6 +26,16 @@
                 <input type="text" id="marca" name="marca" placeholder="Marca" required>
             </div>
             <div>
+                <label for="categoria">Categoria:</label>
+                <select name="categoria">
+                    <option value="Componentes para PC" selected>Componentes para PC</option>
+                    <option value="Accesorios y Periféricos">Accesorios y Periféricos</option>
+                    <option value="Consolas">Consolas</option>
+                    <option value="Videojuegos">Videojuegos</option>
+                    <option value="Accesorios para consolas">Accesorios para consolas</option>
+                </select>
+            </div>
+            <div>
                 <label for="descripcion">Descripción:</label>
                 <textarea id="descripcion" name="descripcion" placeholder="Descripcion"></textarea>
             </div>
@@ -52,6 +62,7 @@
 <%- include('./partials/footer.ejs') %>
 
 <script src="/script.js"></script>
+<script src="/scriptCrearVista.js"></script>
 
 </body>
 </html>
